@@ -1,0 +1,353 @@
+Go-Lang Standard Library
+Eko Kurniawan Khannedy
+
+Eko Kurniawan Khannedy
+Technical architect at one of the biggest ecommerce company in Indonesia
+12+ years experiences
+www.programmerzamannow.com
+youtube.com/c/ProgrammerZamanNow
+
+Eko Kurniawan Khannedy
+Telegram : @khannedy
+Linkedin : https://www.linkedin.com/company/programmer-zaman-now/ 
+Facebook : fb.com/ProgrammerZamanNow
+Instagram : instagram.com/programmerzamannow
+Youtube : youtube.com/c/ProgrammerZamanNow
+Telegram Channel : t.me/ProgrammerZamanNow
+Tiktok : https://tiktok.com/@programmerzamannow 
+Email : echo.khannedy@gmail.com
+
+Sebelum Belajar
+Go-Lang Dasar
+
+Standard Library
+
+Standard Library
+Go-Lang, selain merupakan bahasa pemrograman, Go-Lang juga menyediakan Standard Library (package bawaan) tanpa harus menggunakan package dari luar buatan orang lain
+Contoh pada Kelas Go-Lang Dasar, kita sudah belajar package bernama fmt atau errors
+Selain package tersebut, sebenarnya masih banyak package lainnya yang bisa kita gunakan
+Pada materi ini, kita akan coba bahas lebih detail package-package yang terdapat sebagai Standard Library di Go-Lang yang sering digunakan saat kita membuat aplikasi
+https://pkg.go.dev/std 
+
+Membuat Project
+
+Membuat Project
+Buatlah folder belajar-golang-standard-library
+go mod init belajar-golang-standard-library
+
+Package fmt
+
+Package fmt
+Sebelumnya kita sudah sering menggunakan package fmt dengan menggunakan function Println
+Selain Println, masih banyak function yang terdapat di package fmt, contohnya banyak digunakan untuk melakukan format
+https://pkg.go.dev/fmt 
+
+Kode : Package fmt
+
+Package errors
+
+Package errors
+Sebelumnya kita sudah membahas tentang interface error yang merupakan representasi dari error di Go-Lang, dan membuat error menggunakan function errors.New()
+Sebenarnya masih banyak yang bisa kita lakukan menggunakan package errors, contohnya ketika kita ingin membuat beberapa value error yang berbeda
+https://pkg.go.dev/errors 
+
+Kode : Membuat Error
+
+Kode : Menggunakan Error
+
+Mengecek Jenis Error
+Misal kita membuat jenis error sendiri, lalu kita ingin mengecek jenis errornya
+Kita bisa menggunakan errors.Is() untuk mengecek jenis type error nya
+
+Kode : Mengecek Jenis Error
+
+Package os
+
+Package os
+Go-Lang telah menyediakan banyak sekali package bawaan, salah satunya adalah package os
+Package os berisikan fungsionalitas untuk mengakses fitur sistem operasi secara independen (bisa digunakan  disemua sistem operasi)
+https://golang.org/pkg/os/
+
+Kode Program Package os (1)
+
+Kode Program Package os (2)
+
+Package flag
+
+Package flag
+Package flag berisikan fungsionalitas untuk memparsing command line argument
+https://golang.org/pkg/flag/
+
+Kode Program Package flag
+
+Package strings
+
+Package strings
+Package strings adalah package yang berisikan function-function untuk memanipulasi tipe data String
+Ada banyak sekali function yang bisa kita gunakan
+https://golang.org/pkg/strings/
+
+Beberapa Function di Package strings
+Function
+Kegunaan
+strings.Trim(string, cutset)
+Memotong cutset di awal dan akhir string
+strings.ToLower(string)
+Membuat semua karakter string menjadi lower case
+strings.ToUpper(string)
+Membuat semua karakter string menjadi upper case
+strings.Split(string, separator)
+Memotong string berdasarkan separator
+strings.Contains(string, search)
+Mengecek apakah string mengandung string lain
+strings.ReplaceAll(string, from, to)
+Mengubah semua string dari from ke to
+
+Kode Program Package strings
+
+Package strconv
+
+Package strconv
+Sebelumnya kita sudah belajar cara konversi tipe data, misal dari int32 ke int34
+Bagaimana jika kita butuh melakukan konversi yang tipe datanya berbeda? Misal dari int ke string, atau sebaliknya
+Hal tersebut bisa kita lakukan dengan bantuan package strconv (string conversion)
+https://golang.org/pkg/strconv/
+
+Beberapa Function di Package strconv
+Function
+Kegunaan
+strconv.parseBool(string)
+Mengubah string ke bool
+strconv.parseFloat(string)
+Mengubah string ke float
+strconv.parseInt(string)
+Mengubah string ke int64
+strconv.FormatBool(bool)
+Mengubah bool ke string
+strconv.FormatFloat(float, … )
+Mengubah float64 ke string
+strconv.FormatInt(int, … )
+Mengubah int64 ke string
+
+Kode Program Package strconv
+
+Package math
+
+Package math
+Package math merupakan package yang berisikan constant dan fungsi matematika
+https://golang.org/pkg/math/
+
+Beberapa Function di Package math
+Function
+Kegunaan
+math.Round(float64)
+Membulatkan float64 keatas atau kebawah, sesuai dengan yang paling dekat
+math.Floor(float64)
+Membulatkan float64 kebawah
+math.Ceil(float64)
+Membulatkan float64 keatas
+math.Max(float64, float64)
+Mengembalikan nilai float64 paling besar
+math.Min(float64, float64)
+Mengembalikan nilai float64 paling kecil
+
+Kode Program Package math
+
+Package container/list
+
+Package container/list
+Package container/list adalah implementasi struktur data double linked list di Go-Lang
+https://golang.org/pkg/container/list/
+
+Struktur Data Double Linked List
+
+Kode Program Package container/list
+
+Package container/ring
+
+Package container/ring
+Package container/ring adalah implementasi struktur data circular list
+Circular list adalah struktur data ring, dimana diakhir element akan kembali ke element awal (HEAD)
+https://golang.org/pkg/container/ring/
+
+Struktur Data Circular List
+
+Kode Program Package container/ring
+
+Package sort
+
+Package sort
+Package sort adalah package yang berisikan utilitas untuk proses pengurutan
+Agar data kita bisa diurutkan, kita harus mengimplementasikan kontrak di interface sort.Interface
+https://golang.org/pkg/sort/
+
+sort.Interface
+
+Kode Program Package sort (1)
+
+Kode Program Package sort (2)
+
+Kode Program Package sort (3)
+
+Package time
+
+Package time
+Package time adalah package yang berisikan fungsionalitas untuk management waktu di Go-Lang
+https://golang.org/pkg/time/
+
+Beberapa Function di Package time
+Function
+Kegunaan
+time.Now()
+Untuk mendapatkan waktu saat ini
+time.Date(...)
+Untuk membuat waktu
+time.Parse(layout, string)
+Untuk memparsing waktu dari string
+
+Kode Program Package time
+
+Duration
+Saat menggunakan tipe data waktu, kadang kita butuh data berupa durasi
+Package tipe memiliki type Duration, yang sebenarnya adalah alias untuk int64
+Namun terdapat banyak method yang bisa kita gunakan untuk memanipulasi Duration
+
+Kode : Duration
+
+Package reflect
+
+Package reflect
+Dalam bahasa pemrograman, biasanya ada fitur Reflection, dimana kita bisa melihat struktur kode kita pada saat aplikasi sedang berjalan
+Hal ini bisa dilakukan di Go-Lang dengan menggunakan package reflect
+Fitur ini mungkin tidak bisa dibahas secara lengkap dalam satu video, Anda bisa eksplorasi package reflec ini secara otodidak
+Reflection sangat berguna ketika kita ingin membuat library yang general sehingga mudah digunakan
+https://golang.org/pkg/reflect/
+
+Kode Program Package reflect
+
+Kode Program StructTag
+
+Kode Program Validation Library
+
+Package regexp
+
+Package regexp
+Package regexp adalah utilitas di Go-Lang untuk melakukan pencarian regular expression
+Regular expression di Go-Lang menggunakan library C yang dibuat Google bernama RE2
+https://github.com/google/re2/wiki/Syntax
+https://golang.org/pkg/regexp/
+
+Beberapa Function di Package regexp
+Function
+Kegunaan
+regexp.MustCompile(string)
+Membuat Regexp
+Regexp.MatchString(string) bool
+Mengecek apakah Regexp match dengan string
+Regexp.FindAllString(string, max)
+Mencari string yang match dengan maximum jumlah hasil
+
+Kode Program Package regexp
+
+Package encoding
+
+Package encoding
+Golang menyediakan package encoding untuk melakukan encode dan decode
+https://pkg.go.dev/encoding
+Golang menyediakan berbagai macam algoritma untuk encoding, contoh yang populer adalah base64, csv dan json
+
+Kode : Base64
+
+Kode : CSV Reader
+
+Kode : CSV Writer
+
+Package slices
+
+Package slices
+Di Golang versi terbaru, terdapat fitur bernama Generic, fitur ini akan kita bahas khusus dikelas Golang Generic
+Fitur Generic ini membuat kita bisa membuat parameter dengan tipe yang bisa berubah-ubah, tanpa harus menggunakan interface kosong / any
+Salah satu package yang menggunakan fitur Generic ini adalah package slices
+Package slices ini digunakan untuk memanipulasi data di slice
+https://pkg.go.dev/slices 
+
+Kode : Package slices
+
+Package path
+
+Package path
+Package path digunakan untuk memanipulasi data path seperti path di URL atau path di File System
+Secara default Package path menggunakan slash sebagai karakter path nya, oleh karena itu cocok untuk data URL
+https://pkg.go.dev/path 
+Namun jika ingin menggunakan untuk memanipulasi path di File System, karena Windows menggunakan backslash, maka khusus untuk File System, perlu menggunakan pacakge path/filepath
+https://pkg.go.dev/path/filepath 
+
+Kode : Package path
+
+Kode : Package path/filepath
+
+Package io
+
+Package io
+IO atau singkatan dari Input Output, merupakan fitur di Golang yang digunakan sebagai standard untuk proses Input Output
+Di Golang, semua mekanisme input output pasti mengikuti standard package io
+https://pkg.go.dev/io 
+
+Reader
+Untuk membaca input, Golang menggunakan kontrak interface bernama Reader yang terdapat di package io
+
+Writer
+Untuk menulis ke output, Golang menggunakan kontrak interface bernama Writer yang terdapat di package io
+
+Implementasi IO
+Penggunaan dari IO sendiri di Golang terdapat dibanyak package, sebelumnya contohnya kita menggunakan CSV Reader dan CSV Writer
+Karena Package IO sebenarnya hanya kontrak untuk IO, untuk implementasinya kita harus lakukan sendiri
+Tapi untungnya, Golang juga menyediakan package untuk mengimplementasikan IO secara mudah, yaitu menggunakan package bufio
+
+Package bufio 
+
+Package bufio
+Package bufio atau singkatan dari buffered io 
+Package ini digunakan untuk membuat data IO seperti Reader dan Writer
+https://pkg.go.dev/bufio 
+
+Kode : Reader
+
+Kode : Writer
+
+File Manipulation
+
+File Management
+Di package os, terdapat File Management, namun sengaja ditunda pembahasannya, karena kita harus tahu dulu tentang IO
+Saat kita membuat atau membaca file menggunakan Package os, struct File merupakan implementasi dari io.Reader dan io.Writer
+Oleh karena itu, kita bisa melakukan baca dan tulis terhadap File tersebut menggunakan Package io / bufio
+
+Open File
+Untuk membuat / membaca File, kita bisa menggunakan os.OpenFile(name, flag, permission)
+name berisikan nama file, bisa absolute atau relative / local
+flag merupakan penanda file, apakah untuk membaca, menulis, dan lain-lain
+permission, merupakan permission yang diperlukan ketika membuat file, bisa kita simulasikan disini : https://chmod-calculator.com/ 
+
+File Flag di Package os
+
+Kode : Membuat File Baru
+
+Kode : Membaca File
+
+Kode : Membaca dan Menambah ke File
+
+Package Lainnya
+
+Package Lainnya
+Sebenernya masih ada beberapa package lainnya yang tidak akan dibahas dikelas ini
+Hal ini dikarenakan package tersebut terlalu kompleks jika harus dibahas dalam 1 chapter, oleh karena itu package-package berikut akan dibahas di kelas tersendiri, seperti :
+Package Context, Net, Testing, Template, Database, JSON dan Embed
+
+Materi Selanjutnya
+
+Materi Selanjutnya
+Go-Lang Modules
+Go-Lang Unit Test
+Go-Lang Goroutine
+Go-Lang Database
+Go-Lang Web
