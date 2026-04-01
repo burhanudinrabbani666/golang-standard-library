@@ -196,6 +196,7 @@ Package time adalah package yang berisikan fungsionalitas untuk management waktu
 https://golang.org/pkg/time/
 
 Beberapa Function di Package time
+
 Function
 Kegunaan
 time.Now()
